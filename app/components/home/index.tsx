@@ -12,7 +12,7 @@ const HomePage = () => {
         />
         <div className="w-[75%] h-[100%] relative overflow-auto flex items-end justify-end ml-[20%]">
           <img
-            src="/avatar.png"
+            src="/avatar.PNG"
             alt="avatar"
             className="object-cover w-full max-w-[550px]"
           />
