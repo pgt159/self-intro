@@ -11,15 +11,6 @@ const HomePage = () => {
           className="object-cover h-full w-full  absolute"
         />
         <div className="w-[75%] h-[100%] relative overflow-auto flex items-end justify-end ml-[20%]">
-          {/* <Image
-            src={"/avatar.png"}
-            alt={"avatar"}
-            fill
-            style={{
-              objectFit: "cover",
-            }}
-          /> */}
-
           <img
             src="/avatar.png"
             alt="avatar"
