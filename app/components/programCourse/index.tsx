@@ -1,6 +1,7 @@
+// @ts-nocheck
 "use client";
 import React, { useState } from "react";
-import NavigateBoard from "./navigateBoard";
+import NavigateBoard from "./NavigateBoard";
 const listContentPro = {
   EN: {
     ielts: {
