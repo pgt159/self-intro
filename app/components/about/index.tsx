@@ -2,7 +2,6 @@ import React from "react";
 import AboutBoard from "./AboutBoard";
 
 const AboutPage = () => {
-  console.log("hello");
   return (
     <div className="flex flex-row pl-[70px] gap-[35px] ">
       <div className="flex flex-col w-[35%] pt-[40px] gap-[60px]">
