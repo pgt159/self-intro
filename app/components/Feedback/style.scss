@@ -10,3 +10,18 @@
 .react-multi-carousel-dot-list {
   display: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .container-with-dots {
+    margin-inline: 0px;
+  }
+  .image-item {
+    padding: 5px;
+    img {
+      border-radius: 10px;
+    }
+  }
+  .react-multi-carousel-dot-list {
+    display: none;
+  }
+}

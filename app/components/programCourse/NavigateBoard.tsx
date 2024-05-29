@@ -25,7 +25,7 @@ const NavigateBoard = ({
     );
   }, [spanRef, currentKey]);
   return (
-    <div className="border-[1px] border-brown rounded-[32px] py-[35px] p-[25px] flex relative w-fit flex-col gap-[20px] shadow-md">
+    <div className="border-[1px] border-brown rounded-[16px] md:rounded-[32px] md:py-[35px] p-[20px] md:p-[25px] flex relative w-fit flex-col gap-[20px] shadow-md md:h-auto h-fit">
       <div
         ref={markRef}
         className={`absolute w-[5px] bg-brown transition-all left-0 rounded-tr-sm rounded-br-sm`}
@@ -36,7 +36,7 @@ const NavigateBoard = ({
           key={index}
           className={`${
             item === currentKey ? "font-bold text-brown" : ""
-          } inline cursor-pointer relative transition-all after:w-0 after:absolute after:transition-all hover:after:absolute hover:after:w-full hover:after:border-b-[2px] after:bottom-[-5px] after:border-b-brown after:left-0 w-fit `}
+          } inline cursor-pointer relative transition-all after:w-0 after:absolute after:transition-all hover:after:absolute hover:after:w-full hover:after:border-b-[2px] after:bottom-[-5px] after:border-b-brown after:left-0 w-fit md:text-[16px] text-[12px]`}
           onClick={(e) => {
             setCurrentKey(item);
           }}

@@ -121,11 +121,11 @@ const ProgramCourse = ({ type }: { type: "PROGRAM" | "COURSE" }) => {
   return (
     <div
       className={`${
-        type === "PROGRAM" ? "flex-row" : "flex-row-reverse"
-      } flex px-[70px]`}
+        type === "PROGRAM" ? "md:flex-row" : "md:flex-row-reverse"
+      } flex md:px-[70px]  flex-col-reverse px-[25px] md:gap-0 gap-[40px]`}
     >
-      <div className="flex flex-col justify-center gap-[20px] w-[50%] items-center">
-        <div className="flex w-[450px] relative ">
+      <div className="flex flex-col justify-center gap-[20px] md:w-[50%] items-center">
+        <div className="flex md:w-[450px] relative ">
           <img
             src="/test_pic1.png"
             alt="test"
@@ -133,14 +133,14 @@ const ProgramCourse = ({ type }: { type: "PROGRAM" | "COURSE" }) => {
           />
         </div>
         <div className="flex flex-row gap-[25px]">
-          <div className="w-[300px] aspect-square relative">
+          <div className="  w-full md:w-[300px] aspect-square relative">
             <img
               src="/test_pic1.png"
               alt="test"
               className="w-full object-cover"
             />
           </div>
-          <div className="w-[300px] aspect-square relative">
+          <div className="w-full md:w-[300px] aspect-square relative ">
             <img
               src="/test_pic1.png"
               alt="test"
@@ -149,15 +149,21 @@ const ProgramCourse = ({ type }: { type: "PROGRAM" | "COURSE" }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col py-[55px] px-[8%] justify-between">
-        <span className="text-[46px] text-lightPink">{title}</span>
-        <span className="w-[80%]">{currentData[currentKey].content}</span>
-        <NavigateBoard
-          type={type}
-          data={currentData}
-          currentKey={currentKey}
-          setCurrentKey={setCurrentKey}
-        />
+      <div className="flex flex-col md:py-[55px] md:px-[8%] justify-between gap-[15px] md:gap-0:">
+        <span className="text-[30px] md:text-[46px] text-lightPink">
+          {title}
+        </span>
+        <div className="flex md:flex-col flex-row md:gap-0 gap-[20px] flex-1 md:justify-around">
+          <span className="w-[80%] text-[13px]">
+            {currentData[currentKey].content}
+          </span>
+          <NavigateBoard
+            type={type}
+            data={currentData}
+            currentKey={currentKey}
+            setCurrentKey={setCurrentKey}
+          />
+        </div>
       </div>
     </div>
   );

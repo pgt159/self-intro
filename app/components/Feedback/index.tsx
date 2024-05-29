@@ -25,17 +25,19 @@ const Feedback = () => {
       slidesToSlide: 2,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
+      breakpoint: { max: 1024, min: 768 },
+      items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 768, min: 0 },
       items: 1,
     },
   };
   return (
-    <div className="flex flex-col p-[70px] gap-[60px]">
-      <span className="text-[46px] text-lightPink">Feedback</span>
+    <div className="flex flex-col px-[25px] md:p-[70px] gap-[20px] md:gap-[60px]">
+      <span className="text-[30px] md:text-[46px] text-lightPink">
+        Feedback
+      </span>
       <Carousel
         responsive={responsive}
         ssr

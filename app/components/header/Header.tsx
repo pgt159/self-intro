@@ -1,5 +1,8 @@
-import React, { Dispatch, SetStateAction } from "react";
+"use client";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import HeaderTag from "./HeaderTag";
+import HeaderMobile from "./HeaderMobile";
+import HeaderDesktop from "./HeaderDesktop";
 
 const Header = ({
   current,
@@ -8,34 +11,16 @@ const Header = ({
   current: string;
   setCurrent: Dispatch<SetStateAction<string>>;
 }) => {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMobile(window?.innerWidth <= 767);
+  }, []);
+
   return (
-    <div className="fixed top-[33px] w-full px-[70px] z-50">
-      <div className="bg-[#fff]  rounded-[80px] px-[50px] py-[24px] flex flex-row justify-between shadow-md w-full">
-        <div className="font-oregano flex flex-col">
-          <span className="text-brown text-[20px]">PPE.</span>
-          <span className="text-[12px]">Pi Phan English</span>
-        </div>
-        <div className="flex flex-row items-center justify-end gap-[5px]">
-          <HeaderTag current={current} tag={"home"} setCurrent={setCurrent} />
-          <HeaderTag current={current} tag={"about"} setCurrent={setCurrent} />
-          <HeaderTag
-            current={current}
-            tag={"feedback"}
-            setCurrent={setCurrent}
-          />
-          <HeaderTag current={current} tag={"course"} setCurrent={setCurrent} />
-          <HeaderTag
-            current={current}
-            tag={"programs"}
-            setCurrent={setCurrent}
-          />
-          <HeaderTag
-            current={current}
-            tag={"contact"}
-            setCurrent={setCurrent}
-          />
-        </div>
-      </div>
+    <div>
+      <HeaderMobile current={current} setCurrent={setCurrent} />
+      <HeaderDesktop current={current} setCurrent={setCurrent} />
     </div>
   );
 };

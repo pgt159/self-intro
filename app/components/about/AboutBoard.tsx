@@ -6,8 +6,8 @@ const AboutBoard = () => {
   const [activeMenu, setActiveMenu] = useState<string>("CERT");
 
   return (
-    <div className="flex flex-row gap-[20px] w-full bg-lightPink rounded-l-[20px] px-[25px] py-[25px]">
-      <div className="pt-[10%] w-[30%] flex flex-col gap-[30px] ">
+    <div className="flex flex-col md:flex-row gap-[20px] w-full bg-lightPink rounded-[10px] md:rounded-l-[20px] p-[15px] md:p-[25px]">
+      <div className="md:pt-[10%] md:w-[30%] flex flex-row md:flex-col gap-[15px] md:gap-[30px] ">
         <button
           className={`py-[14px] px-[15px] rounded-[40px] transition-all duration-300 ${
             activeMenu === "CERT" ? "bg-brown hover:bg-neutral shadow-md" : ""
@@ -18,7 +18,7 @@ const AboutBoard = () => {
           }}
         >
           <span
-            className={`text-[18px] font-bold ${
+            className={`text-[15px] md:text-[18px] font-bold ${
               activeMenu === "CERT" ? "text-[#fff] " : "text-button"
             }`}
           >
@@ -35,7 +35,7 @@ const AboutBoard = () => {
           }}
         >
           <span
-            className={`text-[18px] font-bold ${
+            className={`text-[15px] md:text-[18px] font-bold ${
               activeMenu === "EXP" ? "text-[#fff] " : "text-button"
             }`}
           >

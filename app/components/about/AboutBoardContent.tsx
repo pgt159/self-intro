@@ -15,11 +15,11 @@ const AboutBoardContent = ({
   return (
     <div
       className={`relative px-[18px] py-[25px] rounded-[20px] transition-all flex flex-col gap-[25px] overflow-hidden ${
-        activeMenu === menu ? "bg-[#fff] flex-1" : ""
+        activeMenu === menu ? "bg-[#fff] flex-1" : "hidden md:flex"
       }`}
     >
       <button
-        className={` transition-all w-[30px] aspect-square ${
+        className={` transition-all w-[30px] aspect-square hidden md:flex ${
           activeMenu === menu ? "bg-lightPink" : "bg-[#fff]"
         } hover:rotate-[45deg] hover:bg-button cursor-pointer rounded-md`}
         onClick={() => {

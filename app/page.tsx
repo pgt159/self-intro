@@ -12,7 +12,7 @@ export default function Home() {
   const [current, setCurrent] = useState<string>("home");
 
   return (
-    <div className="relative flex flex-col gap-[90px]">
+    <div className="relative flex flex-col gap-[40px] md:gap-[90px]">
       <Header current={current} setCurrent={setCurrent} />
       <HomePage />
       <AboutPage />
