@@ -26,7 +26,7 @@ const HomePage = () => {
           dolor maecenas cras ultrices. Urna mauris, sit vitae morbi viverra
           enim sit proin. Tortor, etiam pellentesque nulla nunc.
         </span>
-        <div className="bg-brown hover:bg-neutral transition-all w-min py-[12px] px-[40px] rounded-[40px] cursor-pointer mt-[15px] shadow-md hidden md:flex">
+        <div className="bg-brown md:hover:bg-neutral transition-all w-min py-[12px] px-[40px] rounded-[40px] cursor-pointer mt-[15px] shadow-md hidden md:flex">
           <span className="text-[#fff] font-bold text-[20px]">More</span>
         </div>
       </div>

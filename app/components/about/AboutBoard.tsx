@@ -10,7 +10,9 @@ const AboutBoard = () => {
       <div className="md:pt-[10%] md:w-[30%] flex flex-row md:flex-col gap-[15px] md:gap-[30px] ">
         <button
           className={`py-[14px] px-[15px] rounded-[40px] transition-all duration-300 ${
-            activeMenu === "CERT" ? "bg-brown hover:bg-neutral shadow-md" : ""
+            activeMenu === "CERT"
+              ? "bg-brown md:hover:bg-neutral shadow-md"
+              : ""
           }`}
           onClick={() => {
             if (activeMenu === "CERT") return;
@@ -27,7 +29,7 @@ const AboutBoard = () => {
         </button>
         <button
           className={`py-[14px] px-[15px] rounded-[40px] transition-all ${
-            activeMenu === "EXP" ? "bg-brown hover:bg-neutral shadow-md" : ""
+            activeMenu === "EXP" ? "bg-brown md:hover:bg-neutral shadow-md" : ""
           }`}
           onClick={() => {
             if (activeMenu === "EXP") return;

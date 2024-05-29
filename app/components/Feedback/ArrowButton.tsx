@@ -16,7 +16,7 @@ const ArrowButton = ({
   } = rest;
   return (
     <div
-      className={`rounded-[200px] bg-lightPink cursor-pointer hover:bg-neutral transition-all w-min aspect-square p-[15px] absolute hidden md:flex ${
+      className={`rounded-[200px] bg-lightPink cursor-pointer md:hover:bg-neutral transition-all w-min aspect-square p-[15px] absolute hidden md:flex ${
         direction === "right" ? "right-0" : "rotate-180 left-0"
       }`}
       onClick={onClick}

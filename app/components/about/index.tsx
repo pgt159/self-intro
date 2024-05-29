@@ -20,7 +20,7 @@ const AboutPage = () => {
         </div>
 
         <div className="justify-center mt-[50px] md:flex hidden">
-          <button className="bg-brown hover:bg-neutral transition-all w-min py-[17px] px-[60px] rounded-[40px] cursor-pointer shadow-md">
+          <button className="bg-brown md:hover:bg-neutral transition-all w-min py-[17px] px-[60px] rounded-[40px] cursor-pointer shadow-md">
             <span className="text-[#fff] font-bold text-[20px] whitespace-nowrap">
               Learn more
             </span>
