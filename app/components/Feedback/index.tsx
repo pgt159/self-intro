@@ -38,7 +38,7 @@ const Feedback = () => {
   return (
     <Element name="feedback">
       <div
-        className="flex flex-col px-[25px] md:p-[70px] gap-[20px] md:gap-[60px] md:pt-[120px] md:pb-0"
+        className="flex flex-col px-[25px] md:p-[70px] gap-[20px] md:gap-[60px] md:pt-[120px] pt-[50px] md:pb-0"
         id="feedback"
       >
         <span className="text-[30px] md:text-[46px] text-lightPink">

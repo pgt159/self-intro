@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <Element name="home">
       <div
-        className="flex  md:flex-row flex-col h-[45rem] md:h-[55rem]"
+        className="flex md:flex-row flex-col h-[45rem] md:h-[55rem]"
         id="home"
       >
         <div className="bg-background h-full flex-1 flex justify-center items-end relative">

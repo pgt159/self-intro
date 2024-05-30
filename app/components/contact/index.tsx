@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Element name="contact">
       <div
-        className="flex flex-col px-[25px] md:px-[70px] gap-[30px] md:gap-[80px] pb-[70px] md:pb-[120px] md:mb-[300px] md:pt-[120px]"
+        className="flex flex-col px-[25px] md:px-[70px] gap-[30px] md:gap-[80px] pb-[70px] md:pb-[120px] md:mb-[300px] md:pt-[120px] pt-[50px]"
         id="contact"
       >
         <div className="flex flex-col gap-[10px]">

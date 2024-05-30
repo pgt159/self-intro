@@ -125,7 +125,7 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
       <div
         className={`${
           type === "PROGRAMS" ? "md:flex-row" : "md:flex-row-reverse"
-        } flex md:px-[70px] md:pt-[70px]  flex-col-reverse px-[25px] md:gap-0 gap-[40px]`}
+        } flex md:px-[70px] md:pt-[70px] pt-[50px] flex-col-reverse px-[25px] md:gap-0 gap-[40px]`}
         id={type.toLowerCase()}
       >
         <div className="flex flex-col justify-center gap-[20px] md:w-[50%] items-center">

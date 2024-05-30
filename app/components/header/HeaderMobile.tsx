@@ -62,37 +62,37 @@ const HeaderMobile = ({
                 current={current}
                 tag={"home"}
                 setCurrent={setCurrent}
-                setisToggleMenu={setIsToggleMenu}
+                setIsToggleMenu={setIsToggleMenu}
               />
               <MobileHeaderTag
                 current={current}
                 tag={"about"}
                 setCurrent={setCurrent}
-                setisToggleMenu={setIsToggleMenu}
+                setIsToggleMenu={setIsToggleMenu}
               />
               <MobileHeaderTag
                 current={current}
                 tag={"programs"}
                 setCurrent={setCurrent}
-                setisToggleMenu={setIsToggleMenu}
+                setIsToggleMenu={setIsToggleMenu}
               />
               <MobileHeaderTag
                 current={current}
                 tag={"course"}
                 setCurrent={setCurrent}
-                setisToggleMenu={setIsToggleMenu}
+                setIsToggleMenu={setIsToggleMenu}
               />
               <MobileHeaderTag
                 current={current}
                 tag={"feedback"}
                 setCurrent={setCurrent}
-                setisToggleMenu={setIsToggleMenu}
+                setIsToggleMenu={setIsToggleMenu}
               />
               <MobileHeaderTag
                 current={current}
                 tag={"contact"}
                 setCurrent={setCurrent}
-                setisToggleMenu={setIsToggleMenu}
+                setIsToggleMenu={setIsToggleMenu}
               />
             </div>
           </div>

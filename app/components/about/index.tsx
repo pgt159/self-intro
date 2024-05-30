@@ -5,10 +5,7 @@ import { Element } from "react-scroll";
 const AboutPage = () => {
   return (
     <Element name="about">
-      <div
-        className="flex md:flex-row flex-col px-[20px] md:pt-[120px] md:pl-[70px] gap-[35px]"
-        id="about"
-      >
+      <div className="flex md:flex-row flex-col px-[20px] md:pt-[120px] md:pl-[70px] gap-[35px] pt-[50px]">
         <div className="flex flex-col md:w-[35%] md:pt-[40px] gap-[30px] md:gap-[60px]">
           <span className="text-[30px] md:text-[46px] text-lightPink">
             About
