@@ -1,6 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import ArrowButton from "./ArrowButton";
+import { Element } from "react-scroll";
+
 import "./style.scss";
 
 const Feedback = () => {
@@ -34,35 +36,40 @@ const Feedback = () => {
     },
   };
   return (
-    <div className="flex flex-col px-[25px] md:p-[70px] gap-[20px] md:gap-[60px]">
-      <span className="text-[30px] md:text-[46px] text-lightPink">
-        Feedback
-      </span>
-      <Carousel
-        responsive={responsive}
-        ssr
-        showDots={true}
-        containerClass="container-with-dots"
-        itemClass="image-item"
-        deviceType={""}
-        autoPlay={true}
-        customRightArrow={<ArrowButton direction="right" />}
-        customLeftArrow={<ArrowButton direction="left" />}
-        infinite
+    <Element name="feedback">
+      <div
+        className="flex flex-col px-[25px] md:p-[70px] gap-[20px] md:gap-[60px] md:pt-[120px] md:pb-0"
+        id="feedback"
       >
-        {images.map((image) => {
-          return (
-            <img
-              key={image}
-              draggable={false}
-              style={{ width: "100%", height: "100%", position: "relative" }}
-              src={image}
-              alt={image}
-            />
-          );
-        })}
-      </Carousel>
-    </div>
+        <span className="text-[30px] md:text-[46px] text-lightPink">
+          Feedback
+        </span>
+        <Carousel
+          responsive={responsive}
+          ssr
+          showDots={true}
+          containerClass="container-with-dots"
+          itemClass="image-item"
+          deviceType={""}
+          autoPlay={true}
+          customRightArrow={<ArrowButton direction="right" />}
+          customLeftArrow={<ArrowButton direction="left" />}
+          infinite
+        >
+          {images.map((image) => {
+            return (
+              <img
+                key={image}
+                draggable={false}
+                style={{ width: "100%", height: "100%", position: "relative" }}
+                src={image}
+                alt={image}
+              />
+            );
+          })}
+        </Carousel>
+      </div>
+    </Element>
   );
 };
 

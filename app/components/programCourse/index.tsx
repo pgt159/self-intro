@@ -2,6 +2,8 @@
 "use client";
 import React, { useState } from "react";
 import NavigateBoard from "./NavigateBoard";
+import { Element } from "react-scroll";
+
 const listContentPro = {
   EN: {
     ielts: {
@@ -110,62 +112,65 @@ const listContentCourse = {
     },
   },
 };
-const ProgramCourse = ({ type }: { type: "PROGRAM" | "COURSE" }) => {
+const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
   const title = type[0] + type.toLowerCase().slice(1, type.length);
   const [currentData, setCurrentData] = useState(
-    type === "PROGRAM" ? listContentPro.VI : listContentCourse.VI
+    type === "PROGRAMS" ? listContentPro.VI : listContentCourse.VI
   );
   const [currentKey, setCurrentKey] = useState<string>(
-    type === "PROGRAM" ? "ielts" : "one"
+    type === "PROGRAMS" ? "ielts" : "one"
   );
   return (
-    <div
-      className={`${
-        type === "PROGRAM" ? "md:flex-row" : "md:flex-row-reverse"
-      } flex md:px-[70px]  flex-col-reverse px-[25px] md:gap-0 gap-[40px]`}
-    >
-      <div className="flex flex-col justify-center gap-[20px] md:w-[50%] items-center">
-        <div className="flex md:w-[450px] relative ">
-          <img
-            src="/test_pic1.png"
-            alt="test"
-            className="w-full object-cover"
-          />
-        </div>
-        <div className="flex flex-row gap-[25px]">
-          <div className="  w-full md:w-[300px] aspect-square relative">
+    <Element name={type.toLowerCase()}>
+      <div
+        className={`${
+          type === "PROGRAMS" ? "md:flex-row" : "md:flex-row-reverse"
+        } flex md:px-[70px] md:pt-[70px]  flex-col-reverse px-[25px] md:gap-0 gap-[40px]`}
+        id={type.toLowerCase()}
+      >
+        <div className="flex flex-col justify-center gap-[20px] md:w-[50%] items-center">
+          <div className="flex md:w-[450px] relative ">
             <img
               src="/test_pic1.png"
               alt="test"
               className="w-full object-cover"
             />
           </div>
-          <div className="w-full md:w-[300px] aspect-square relative ">
-            <img
-              src="/test_pic1.png"
-              alt="test"
-              className="w-full object-cover"
-            />
+          <div className="flex flex-row gap-[25px]">
+            <div className="  w-full md:w-[300px] aspect-square relative">
+              <img
+                src="/test_pic1.png"
+                alt="test"
+                className="w-full object-cover"
+              />
+            </div>
+            <div className="w-full md:w-[300px] aspect-square relative ">
+              <img
+                src="/test_pic1.png"
+                alt="test"
+                className="w-full object-cover"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="flex flex-col md:py-[55px] md:px-[8%] justify-between gap-[15px] md:gap-0:">
-        <span className="text-[30px] md:text-[46px] text-lightPink">
-          {title}
-        </span>
-        <div className="flex md:flex-col flex-row md:gap-0 gap-[20px] flex-1 md:justify-around">
-          <span className="w-[80%] text-[13px]">
-            {currentData[currentKey].content}
+        <div className="flex flex-col md:py-[55px] md:px-[8%] justify-between gap-[15px] md:gap-0:">
+          <span className="text-[30px] md:text-[46px] text-lightPink">
+            {title}
           </span>
-          <NavigateBoard
-            type={type}
-            data={currentData}
-            currentKey={currentKey}
-            setCurrentKey={setCurrentKey}
-          />
+          <div className="flex md:flex-col flex-row md:gap-0 gap-[20px] flex-1 md:justify-around">
+            <span className="w-[80%] text-[13px]">
+              {currentData[currentKey].content}
+            </span>
+            <NavigateBoard
+              type={type}
+              data={currentData}
+              currentKey={currentKey}
+              setCurrentKey={setCurrentKey}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

@@ -20,13 +20,14 @@ const HeaderDesktop = ({
           <HeaderTag current={current} tag={"about"} setCurrent={setCurrent} />
           <HeaderTag
             current={current}
-            tag={"feedback"}
+            tag={"programs"}
             setCurrent={setCurrent}
           />
           <HeaderTag current={current} tag={"course"} setCurrent={setCurrent} />
+
           <HeaderTag
             current={current}
-            tag={"programs"}
+            tag={"feedback"}
             setCurrent={setCurrent}
           />
           <HeaderTag

@@ -4,6 +4,7 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 import React, { useState } from "react";
 import zIndex from "@mui/material/styles/zIndex";
+import MobileHeaderTag from "./MobileHeaderTag";
 
 const HeaderMobile = ({
   current,
@@ -56,7 +57,44 @@ const HeaderMobile = ({
               </IconButton>
             </div>
 
-            <div className="mt-[1rem] flex flex-col gap-[1rem]"></div>
+            <div className="mt-[1rem] flex flex-col gap-[1rem]">
+              <MobileHeaderTag
+                current={current}
+                tag={"home"}
+                setCurrent={setCurrent}
+                setisToggleMenu={setIsToggleMenu}
+              />
+              <MobileHeaderTag
+                current={current}
+                tag={"about"}
+                setCurrent={setCurrent}
+                setisToggleMenu={setIsToggleMenu}
+              />
+              <MobileHeaderTag
+                current={current}
+                tag={"programs"}
+                setCurrent={setCurrent}
+                setisToggleMenu={setIsToggleMenu}
+              />
+              <MobileHeaderTag
+                current={current}
+                tag={"course"}
+                setCurrent={setCurrent}
+                setisToggleMenu={setIsToggleMenu}
+              />
+              <MobileHeaderTag
+                current={current}
+                tag={"feedback"}
+                setCurrent={setCurrent}
+                setisToggleMenu={setIsToggleMenu}
+              />
+              <MobileHeaderTag
+                current={current}
+                tag={"contact"}
+                setCurrent={setCurrent}
+                setisToggleMenu={setIsToggleMenu}
+              />
+            </div>
           </div>
         </SlidingMenu>
       </Slide>

@@ -1,6 +1,7 @@
 // @ts-nocheck
 "use client";
 import React, { Dispatch, SetStateAction, useRef } from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const HeaderTag = ({
   current,
@@ -14,10 +15,19 @@ const HeaderTag = ({
   const isCurrentTag = current === tag;
   const underlineRef = useRef(null);
   return (
-    <div
-      className={`rounded-[25px] relative ${
-        isCurrentTag ? "bg-brown" : ""
-      } text-[18px] h-min px-[15px] py-[10px] cursor-pointer transition-all duration-150 
+    <ScrollLink
+      to={tag}
+      spy={true}
+      smooth={true}
+      duration={300}
+      onSetActive={() => {
+        setCurrent(tag);
+      }}
+    >
+      <div
+        className={`button rounded-[25px] relative ${
+          isCurrentTag ? "bg-brown" : ""
+        } text-[18px] h-min px-[15px] py-[10px] cursor-pointer transition-all duration-150 
         ${
           isCurrentTag
             ? ""
@@ -25,25 +35,26 @@ const HeaderTag = ({
         }
          
       `}
-      onClick={(e) => {
-        if (underlineRef.current) {
-          underlineRef.current.setAttribute("style", "width:0%; ");
-        }
-        setCurrent(tag);
-      }}
-    >
-      <span
-        className={`${isCurrentTag ? "font-bold" : ""} ${
-          isCurrentTag ? "text-[#fff]" : ""
-        } uppercase transition-all duration-150`}
+        onClick={(e) => {
+          if (underlineRef.current) {
+            underlineRef.current.setAttribute("style", "width:0%; ");
+          }
+          setCurrent(tag);
+        }}
       >
-        {tag}
-      </span>
-      <div
-        ref={underlineRef}
-        className="absolute bottom-0 left-0 transition-all duration-200 border-b-[2px] border-solid"
-      />
-    </div>
+        <span
+          className={`${isCurrentTag ? "font-bold" : ""} ${
+            isCurrentTag ? "text-[#fff]" : ""
+          } uppercase transition-all duration-150`}
+        >
+          {tag}
+        </span>
+        <div
+          ref={underlineRef}
+          className="absolute bottom-0 left-0 transition-all duration-200 border-b-[2px] border-solid"
+        />
+      </div>
+    </ScrollLink>
   );
 };
 
