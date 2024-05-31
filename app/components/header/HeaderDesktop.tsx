@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderTag from "./HeaderTag";
-
+import { motion } from "framer-motion";
 const HeaderDesktop = ({
   current,
   setCurrent,
@@ -9,8 +9,8 @@ const HeaderDesktop = ({
   setCurrent: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   return (
-    <div className="fixed top-[33px] w-full px-[70px] z-50 hidden md:flex">
-      <div className="bg-[#fff]  rounded-[80px] px-[50px] py-[24px] flex flex-row justify-between shadow-md w-full">
+    <motion.div className="fixed top-[20px] w-full px-[70px] z-50 hidden md:flex ">
+      <div className="bg-[#fff] rounded-[80px] px-[50px] py-[24px] flex flex-row justify-between shadow-md w-full">
         <div className="font-oregano flex flex-col">
           <span className="text-brown text-[20px]">PPE.</span>
           <span className="text-[12px]">Pi Phan English</span>
@@ -37,7 +37,7 @@ const HeaderDesktop = ({
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

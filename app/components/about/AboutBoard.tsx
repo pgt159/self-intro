@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import AboutBoardContent from "./AboutBoardContent";
+import { motion } from "framer-motion";
 
 const AboutBoard = () => {
   const [activeMenu, setActiveMenu] = useState<string>("CERT");
@@ -19,13 +20,21 @@ const AboutBoard = () => {
             setActiveMenu("CERT");
           }}
         >
-          <span
+          <motion.span
+            initial={{
+              x: 100,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
             className={`text-[15px] md:text-[18px] font-bold ${
               activeMenu === "CERT" ? "text-[#fff] " : "text-button"
             }`}
           >
             Bằng cấp
-          </span>
+          </motion.span>
         </button>
         <button
           className={`py-[14px] px-[15px] rounded-[40px] transition-all ${
@@ -36,13 +45,21 @@ const AboutBoard = () => {
             setActiveMenu("EXP");
           }}
         >
-          <span
+          <motion.span
+            initial={{
+              x: 100,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
             className={`text-[15px] md:text-[18px] font-bold ${
               activeMenu === "EXP" ? "text-[#fff] " : "text-button"
             }`}
           >
             Kinh Nghiệm
-          </span>
+          </motion.span>
         </button>
       </div>
       <div className="relative flex flex-row w-full">

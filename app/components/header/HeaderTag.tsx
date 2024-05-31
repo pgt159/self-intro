@@ -2,6 +2,7 @@
 "use client";
 import React, { Dispatch, SetStateAction, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
 
 const HeaderTag = ({
   current,
@@ -18,13 +19,13 @@ const HeaderTag = ({
     <ScrollLink
       to={tag}
       spy={true}
-      smooth={true}
-      duration={300}
+      smooth={false}
+      duration={50}
       onSetActive={() => {
         setCurrent(tag);
       }}
     >
-      <div
+      <motion.div
         className={`button rounded-[25px] relative ${
           isCurrentTag ? "bg-brown" : ""
         } text-[18px] h-min px-[15px] py-[10px] cursor-pointer transition-all duration-150 
@@ -53,7 +54,7 @@ const HeaderTag = ({
           ref={underlineRef}
           className="absolute bottom-0 left-0 transition-all duration-200 border-b-[2px] border-solid"
         />
-      </div>
+      </motion.div>
     </ScrollLink>
   );
 };

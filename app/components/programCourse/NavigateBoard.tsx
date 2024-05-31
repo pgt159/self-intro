@@ -1,5 +1,6 @@
 // @ts-nocheck
 import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const NavigateBoard = ({
   type,
@@ -25,13 +26,29 @@ const NavigateBoard = ({
     );
   }, [spanRef, currentKey]);
   return (
-    <div className="border-[1px] border-brown rounded-[16px] md:rounded-[32px] md:py-[35px] p-[20px] md:p-[25px] flex relative w-fit flex-col gap-[20px] shadow-md md:h-auto h-fit">
-      <div
+    <motion.div
+      initial={{
+        x: 100,
+        opacity: 0,
+      }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+      }}
+      className="border-[1px] border-brown rounded-[16px] md:rounded-[32px] md:py-[35px] p-[20px] md:p-[25px] flex relative w-fit flex-col gap-[20px] shadow-md md:h-auto h-fit"
+    >
+      <motion.div
         ref={markRef}
         className={`absolute w-[5px] bg-brown transition-all left-0 rounded-tr-sm rounded-br-sm`}
       />
       {Object.keys(data).map((item, index) => (
-        <span
+        <motion.span
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
           ref={spanRef}
           key={index}
           className={`${
@@ -43,9 +60,9 @@ const NavigateBoard = ({
           id={item}
         >
           {data[item].title}
-        </span>
+        </motion.span>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

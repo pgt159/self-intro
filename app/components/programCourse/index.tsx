@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import NavigateBoard from "./NavigateBoard";
 import { Element } from "react-scroll";
-
+import { motion } from "framer-motion";
 const listContentPro = {
   EN: {
     ielts: {
@@ -125,12 +125,19 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
       <div
         className={`${
           type === "PROGRAMS" ? "md:flex-row" : "md:flex-row-reverse"
-        } flex md:px-[70px] md:pt-[70px] pt-[50px] flex-col-reverse px-[25px] md:gap-0 gap-[40px]`}
-        id={type.toLowerCase()}
+        } flex md:px-[70px] md:pt-[120px] pt-[50px flex-col-reverse px-[25px] md:gap-0 gap-[40px]`}
       >
         <div className="flex flex-col justify-center gap-[20px] md:w-[50%] items-center">
           <div className="flex md:w-[450px] relative ">
-            <img
+            <motion.img
+              initial={{
+                x: -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+              }}
               src="/test_pic1.png"
               alt="test"
               className="w-full object-cover"
@@ -138,14 +145,30 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
           </div>
           <div className="flex flex-row gap-[25px]">
             <div className="  w-full md:w-[300px] aspect-square relative">
-              <img
+              <motion.img
+                initial={{
+                  y: -100,
+                  opacity: 0,
+                }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                }}
                 src="/test_pic1.png"
                 alt="test"
                 className="w-full object-cover"
               />
             </div>
             <div className="w-full md:w-[300px] aspect-square relative ">
-              <img
+              <motion.img
+                initial={{
+                  y: 100,
+                  opacity: 0,
+                }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                }}
                 src="/test_pic1.png"
                 alt="test"
                 className="w-full object-cover"
@@ -154,13 +177,33 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
           </div>
         </div>
         <div className="flex flex-col md:py-[55px] md:px-[8%] justify-between gap-[15px] md:gap-0:">
-          <span className="text-[30px] md:text-[46px] text-lightPink">
+          <motion.span
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className="text-[30px] md:text-[46px] text-lightPink"
+          >
             {title}
-          </span>
+          </motion.span>
           <div className="flex md:flex-col flex-row md:gap-0 gap-[20px] flex-1 md:justify-around">
-            <span className="w-[80%] text-[13px]">
+            <motion.span
+              initial={{
+                x: -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+              }}
+              className="w-[80%] text-[13px]"
+            >
               {currentData[currentKey].content}
-            </span>
+            </motion.span>
             <NavigateBoard
               type={type}
               data={currentData}

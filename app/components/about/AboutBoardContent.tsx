@@ -1,7 +1,7 @@
 "use client";
 import { TEXT } from "@/app/text";
 import React from "react";
-
+import { motion } from "framer-motion";
 const AboutBoardContent = ({
   menu,
   activeMenu,
@@ -32,12 +32,35 @@ const AboutBoardContent = ({
             activeMenu === menu ? "" : "hidden"
           } `}
         >
-          <span className="text-[24px] font-bold">{text.TITLE.VI}</span>
+          <motion.span
+            initial={{
+              y: -100,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className="text-[24px] font-bold"
+          >
+            {text.TITLE.VI}
+          </motion.span>
           <div className="flex flex-col gap-[12px]">
             {text.CONTENT.VI.map((item, index) => (
-              <span key={index} className="">
+              <motion.span
+                initial={{
+                  x: -100,
+                  opacity: 0,
+                }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                }}
+                key={index}
+                className=""
+              >
                 {item}
-              </span>
+              </motion.span>
             ))}
           </div>
         </div>

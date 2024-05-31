@@ -1,55 +1,129 @@
 import React from "react";
 import { Email, Facebook, Phone } from "./svg";
 import { Element } from "react-scroll";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <Element name="contact">
-      <div
-        className="flex flex-col px-[25px] md:px-[70px] gap-[30px] md:gap-[80px] pb-[70px] md:pb-[120px] md:mb-[300px] md:pt-[120px] pt-[50px]"
-        id="contact"
-      >
+      <div className="flex flex-col px-[25px] md:px-[70px] gap-[30px] md:gap-[80px] pb-[70px] md:pb-[120px] pt-[50px]">
         <div className="flex flex-col gap-[10px]">
-          <span className="text-[30px] md:text-[46px] text-lightPink">
+          <motion.span
+            initial={{
+              y: 100,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className="text-[30px] md:text-[46px] text-lightPink"
+          >
             Contact
-          </span>
-          <span className="text-[12px] md:text-[20px] pl-[10px]">
+          </motion.span>
+          <motion.span
+            initial={{
+              y: 100,
+              opacity: 0,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+            }}
+            className="text-[12px] md:text-[20px] pl-[10px]"
+          >
             Contact me for business
-          </span>
+          </motion.span>
         </div>
         <div className="flex flex-col md:flex-row justify-start md:justify-between items-center">
           <div className="flex flex-row md:flex-col gap-[10px] md:gap-[35px] py-[10px] md:p-[15px] justify-start md:justify-center items-center w-full">
-            <div className="scale-50 md:scale-100">
+            <motion.div
+              initial={{
+                x: 100,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+              }}
+              className="scale-50 md:scale-100"
+            >
               <Phone />
-            </div>
-            <span className="font-sanchez text-[14px] text-brown">
+            </motion.div>
+            <motion.span
+              initial={{
+                y: -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className="font-sanchez text-[14px] text-brown"
+            >
               (+84) 089 837 3112
-            </span>
+            </motion.span>
           </div>
           <div className="flex flex-row md:flex-col gap-[10px] md:gap-[35px] py-[10px] md:p-[15px] justify-start md:justify-center items-center w-full">
-            <div className="scale-50 md:scale-100">
+            <motion.div
+              initial={{
+                x: 100,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+              }}
+              className="scale-50 md:scale-100"
+            >
               <Email />
-            </div>
-            <span className="font-sanchez text-[14px] text-brown">
+            </motion.div>
+            <motion.span
+              initial={{
+                y: -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
+              className="font-sanchez text-[14px] text-brown"
+            >
               nguyetpttt2111@gmail.com
-            </span>
+            </motion.span>
           </div>
           <div className="flex flex-row md:flex-col gap-[10px] md:gap-[35px] py-[10px] md:p-[15px] justify-start md:justify-center items-center w-full">
-            <div
+            <motion.div
+              initial={{
+                x: 100,
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+              }}
               className="cursor-pointer scale-50 md:scale-100"
               onClick={() => {
                 window.open("https://www.facebook.com/nguytphann");
               }}
             >
               <Facebook />
-            </div>
-            <a
+            </motion.div>
+            <motion.a
+              initial={{
+                y: -100,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+              }}
               className="font-sanchez text-[14px] text-brown"
               href="https://www.facebook.com/nguytphann"
               target="_blank"
             >
               https://www.facebook.com/nguytphann
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>

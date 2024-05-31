@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import ArrowButton from "./ArrowButton";
 import { Element } from "react-scroll";
-
+import { motion } from "framer-motion";
 import "./style.scss";
 
 const Feedback = () => {
@@ -37,13 +37,20 @@ const Feedback = () => {
   };
   return (
     <Element name="feedback">
-      <div
-        className="flex flex-col px-[25px] md:p-[70px] gap-[20px] md:gap-[60px] md:pt-[120px] pt-[50px] md:pb-0"
-        id="feedback"
+      <motion.div
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
+        className="flex flex-col px-[25px] md:p-[70px] gap-[20px] md:gap-[40px] md:pb-0 md:pt-[120px]"
       >
-        <span className="text-[30px] md:text-[46px] text-lightPink">
+        <motion.span className="text-[30px] md:text-[46px] text-lightPink">
           Feedback
-        </span>
+        </motion.span>
         <Carousel
           responsive={responsive}
           ssr
@@ -68,7 +75,7 @@ const Feedback = () => {
             );
           })}
         </Carousel>
-      </div>
+      </motion.div>
     </Element>
   );
 };
