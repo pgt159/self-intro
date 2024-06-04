@@ -28,7 +28,7 @@ const NavigateBoard = ({
   return (
     <motion.div
       initial={{
-        x: 100,
+        x: -100,
         opacity: 0,
       }}
       whileInView={{

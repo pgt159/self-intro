@@ -193,7 +193,7 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
           <div className="flex md:flex-col flex-row md:gap-0 gap-[20px] flex-1 md:justify-around">
             <motion.span
               initial={{
-                x: -100,
+                x: 100,
                 opacity: 0,
               }}
               whileInView={{
