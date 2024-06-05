@@ -4,6 +4,7 @@ import { Element } from "react-scroll";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const isVI = true;
   return (
     <Element name="contact">
       <div className="flex flex-col px-[25px] md:px-[70px] gap-[30px] md:gap-[80px] pb-[70px] md:pb-[120px] pt-[50px]">
@@ -19,7 +20,7 @@ const Contact = () => {
             }}
             className="text-[30px] md:text-[46px] text-lightPink"
           >
-            Contact
+            {isVI ? "Liên hệ" : "Contact"}
           </motion.span>
           <motion.span
             initial={{
@@ -32,7 +33,7 @@ const Contact = () => {
             }}
             className="text-[12px] md:text-[20px] pl-[10px]"
           >
-            Contact me for business
+            {isVI ? "Liên hệ công việc" : "Contact me for business"}
           </motion.span>
         </div>
         <div className="flex flex-col md:flex-row justify-start md:justify-between items-center">

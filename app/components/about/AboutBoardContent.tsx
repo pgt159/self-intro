@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { TEXT } from "@/app/text";
 import React from "react";
@@ -34,20 +35,22 @@ const AboutBoardContent = ({
         >
           <motion.span
             initial={{
-              y: -100,
               opacity: 0,
             }}
             whileInView={{
-              y: 0,
               opacity: 1,
             }}
             className="text-[24px] font-bold"
           >
             {text.TITLE.VI}
           </motion.span>
-          <div className="flex flex-col gap-[12px]">
+          <div
+            className={`${
+              menu === "CERT" ? "flex flex-col" : "grid grid-cols-2"
+            } gap-[12px]`}
+          >
             {text.CONTENT.VI.map((item, index) => (
-              <motion.span
+              <motion.div
                 initial={{
                   x: -100,
                   opacity: 0,
@@ -59,8 +62,15 @@ const AboutBoardContent = ({
                 key={index}
                 className=""
               >
-                {item}
-              </motion.span>
+                {menu === "CERT" ? item : null}
+                {menu === "EXP" ? (
+                  <div className="flex flex-col">
+                    <span className="font-bold text-[18px]">{item.title}</span>
+                    <span className="font-raleway">{item.time}</span>
+                    <span className="italic">{item.workplace}</span>
+                  </div>
+                ) : null}
+              </motion.div>
             ))}
           </div>
         </div>

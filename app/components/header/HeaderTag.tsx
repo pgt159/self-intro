@@ -8,11 +8,14 @@ const HeaderTag = ({
   current,
   tag,
   setCurrent,
+  vi,
 }: {
   current: string;
   tag: string;
   setCurrent: Dispatch<SetStateAction<string>>;
+  vi: string;
 }) => {
+  const isVI = true;
   const isCurrentTag = current === tag;
   const underlineRef = useRef(null);
   return (
@@ -48,7 +51,7 @@ const HeaderTag = ({
             isCurrentTag ? "text-[#fff]" : ""
           } uppercase transition-all duration-150`}
         >
-          {tag}
+          {isVI ? vi : tag}
         </span>
         <div
           ref={underlineRef}

@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 
 const HomePage = () => {
+  const language = "VI";
+  const isVI = true;
   return (
     <Element name="home">
       <div
@@ -47,7 +49,7 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className={"text-[25px] md:text-[40px]"}
           >
-            Hello!
+            {isVI ? "Giáo viên tiếng Anh" : "English teacher"}
           </motion.span>
           <motion.span
             initial={{
@@ -61,7 +63,7 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className={"text-[40px] md:text-[60px]"}
           >
-            I'm NGUYET
+            {isVI ? "Ms NGUYỆT" : "Ms NGUYET"}
           </motion.span>
           <motion.span
             initial={{
@@ -73,11 +75,11 @@ const HomePage = () => {
               y: 0,
             }}
             transition={{ duration: 0.8 }}
-            className={"text-[12px] md:text-[16px]"}
+            className={"text-[12px] md:text-[16px] italic"}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac, proin
-            dolor maecenas cras ultrices. Urna mauris, sit vitae morbi viverra
-            enim sit proin. Tortor, etiam pellentesque nulla nunc.
+            {isVI
+              ? '"Thầy Cô giáo hạnh phúc sẽ thay đổi thế giới."'
+              : '"Happy teachers change the world."'}
           </motion.span>
           <motion.div
             initial={{
@@ -86,7 +88,7 @@ const HomePage = () => {
             whileInView={{
               opacity: 1,
             }}
-            className="bg-brown md:hover:bg-neutral transition-all w-min py-[12px] px-[40px] rounded-[40px] cursor-pointer mt-[15px] shadow-md hidden md:flex relative"
+            className="bg-brown md:hover:bg-neutral transition-all w-fit py-[12px] px-[40px] rounded-[40px] cursor-pointer shadow-md hidden md:flex relative mt-[50px]"
           >
             <ScrollLink
               to={"about"}
@@ -95,7 +97,9 @@ const HomePage = () => {
               duration={300}
               className="w-full h-full block absolute inset-0"
             ></ScrollLink>
-            <span className="text-[#fff] font-bold text-[20px]">More</span>
+            <span className="text-[#fff] font-bold text-[20px]">
+              {isVI ? "Xem thêm" : "More"}
+            </span>
           </motion.div>
         </div>
       </div>

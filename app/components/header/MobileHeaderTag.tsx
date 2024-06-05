@@ -7,12 +7,15 @@ const MobileHeaderTag = ({
   tag,
   setCurrent,
   setIsToggleMenu,
+  vi,
 }: {
   current: string;
   tag: string;
   setCurrent: Dispatch<SetStateAction<string>>;
   setIsToggleMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  vi: string;
 }) => {
+  const isVI = true;
   const isCurrentTag = current === tag;
   return (
     <div>
@@ -33,7 +36,7 @@ const MobileHeaderTag = ({
           }}
         >
           <span className={`font-bold uppercase transition-all duration-150`}>
-            {tag}
+            {isVI ? vi : tag}
           </span>
           <div className="absolute bottom-0 left-0 transition-all duration-200 border-b-[2px] border-solid" />
         </div>

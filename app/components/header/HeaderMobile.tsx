@@ -63,36 +63,42 @@ const HeaderMobile = ({
                 tag={"home"}
                 setCurrent={setCurrent}
                 setIsToggleMenu={setIsToggleMenu}
+                vi="Trang đầu"
               />
               <MobileHeaderTag
                 current={current}
                 tag={"about"}
                 setCurrent={setCurrent}
                 setIsToggleMenu={setIsToggleMenu}
+                vi={"Giới thiệu"}
               />
               <MobileHeaderTag
                 current={current}
                 tag={"programs"}
                 setCurrent={setCurrent}
                 setIsToggleMenu={setIsToggleMenu}
+                vi={"Chương trình"}
               />
               <MobileHeaderTag
                 current={current}
                 tag={"course"}
                 setCurrent={setCurrent}
                 setIsToggleMenu={setIsToggleMenu}
+                vi={"Khoá học"}
               />
               <MobileHeaderTag
                 current={current}
                 tag={"feedback"}
                 setCurrent={setCurrent}
                 setIsToggleMenu={setIsToggleMenu}
+                vi={"Nhận xét"}
               />
               <MobileHeaderTag
                 current={current}
                 tag={"contact"}
                 setCurrent={setCurrent}
                 setIsToggleMenu={setIsToggleMenu}
+                vi="Liên hệ"
               />
             </div>
           </div>
