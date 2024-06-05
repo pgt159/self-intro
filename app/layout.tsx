@@ -1,7 +1,6 @@
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import "react-multi-carousel/lib/styles.css";
-import Meta from "@/app/Meta";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <Meta />
         <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>
     </html>
