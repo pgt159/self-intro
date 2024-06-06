@@ -22,7 +22,7 @@ const HeaderDesktop = ({
             current={current}
             tag={"home"}
             setCurrent={setCurrent}
-            vi="Trang đầu"
+            vi="Trang chủ"
           />
           <HeaderTag
             current={current}

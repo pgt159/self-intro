@@ -5,8 +5,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Moonlit English | Ms Nguyet Phan",
-    default: "Moonlit English | Ms Nguyet Phan",
+    template: "%s | Moonlit English | Ms. Nguyet Phan",
+    default: "Moonlit English | Ms. Nguyet Phan",
   },
   description: "Learning English with Ms Nguyet Phan",
   icons: {

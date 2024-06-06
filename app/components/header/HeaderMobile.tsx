@@ -63,7 +63,7 @@ const HeaderMobile = ({
                 tag={"home"}
                 setCurrent={setCurrent}
                 setIsToggleMenu={setIsToggleMenu}
-                vi="Trang đầu"
+                vi="Trang chủ"
               />
               <MobileHeaderTag
                 current={current}

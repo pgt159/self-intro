@@ -20,6 +20,7 @@ const Feedback = () => {
     "/feedback/feedback_10.PNG",
     "/feedback/feedback_11.PNG",
     "/feedback/feedback_12.PNG",
+    "/feedback/feedback_13.PNG",
   ];
   const responsive = {
     desktop: {

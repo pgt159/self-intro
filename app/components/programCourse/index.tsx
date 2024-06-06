@@ -187,7 +187,7 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:py-[55px] md:px-[8%] justify-between gap-[15px] md:gap-0 md:w-[50%]">
+        <div className="flex flex-col md:py-[55px] md:px-[8%] justify-between gap-[15px] md:gap-[50px] md:w-[50%]">
           <motion.span
             initial={{
               y: -100,
@@ -201,7 +201,7 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
           >
             {title}
           </motion.span>
-          <div className="flex md:flex-col flex-row md:gap-0 gap-[20px] flex-1 md:justify-around">
+          <div className="flex md:flex-col flex-row gap-[20px] flex-1 md:gap-[50px]">
             <motion.span
               initial={{
                 x: 100,
@@ -211,7 +211,7 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
                 x: 0,
                 opacity: 1,
               }}
-              className="w-[80%] text-[14px] whitespace-pre-wrap break-words"
+              className="w-[80%] text-[14px] md:text-[20px] whitespace-pre-wrap break-words"
             >
               {currentData[currentKey].content}
             </motion.span>

@@ -61,9 +61,9 @@ const HomePage = () => {
               y: 0,
             }}
             transition={{ duration: 0.8 }}
-            className={"text-[40px] md:text-[60px]"}
+            className={"text-[40px] md:text-[60px] font-bold"}
           >
-            {isVI ? "Ms NGUYỆT" : "Ms NGUYET"}
+            {isVI ? "Ms. Nguyệt" : "Ms. Nguyet"}
           </motion.span>
           <motion.span
             initial={{
