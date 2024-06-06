@@ -143,9 +143,11 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
                 x: 0,
                 opacity: 1,
               }}
-              src="/test_pic1.png"
-              alt="test"
-              className="w-full object-cover"
+              src={`/course_and_programs/${
+                type === "PROGRAMS" ? "pro" : "course"
+              }_1.jpg`}
+              alt="iamge"
+              className="w-full object-cover rounded-lg"
             />
           </div>
           <div className="flex flex-row gap-[25px]">
@@ -159,9 +161,11 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
                   y: 0,
                   opacity: 1,
                 }}
-                src="/test_pic1.png"
+                src={`/course_and_programs/${
+                  type === "PROGRAMS" ? "pro" : "course"
+                }_2.jpg`}
                 alt="test"
-                className="w-full object-cover"
+                className="w-full object-cover rounded-lg"
               />
             </div>
             <div className="w-full md:w-[300px] aspect-square relative ">
@@ -174,9 +178,11 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
                   y: 0,
                   opacity: 1,
                 }}
-                src="/test_pic1.png"
+                src={`/course_and_programs/${
+                  type === "PROGRAMS" ? "pro" : "course"
+                }_3.jpg`}
                 alt="test"
-                className="w-full object-cover"
+                className="w-full object-cover rounded-lg"
               />
             </div>
           </div>

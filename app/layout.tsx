@@ -9,7 +9,9 @@ export const metadata: Metadata = {
     default: "Moonlit English | Ms Nguyet Phan",
   },
   description: "Learning English with Ms Nguyet Phan",
-  icons: "/favico",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
