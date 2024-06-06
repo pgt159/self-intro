@@ -145,7 +145,7 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
               }}
               src={`/course_and_programs/${
                 type === "PROGRAMS" ? "pro" : "course"
-              }_1.jpg`}
+              }_1.png`}
               alt="iamge"
               className="w-full object-cover rounded-lg"
             />
@@ -163,7 +163,7 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
                 }}
                 src={`/course_and_programs/${
                   type === "PROGRAMS" ? "pro" : "course"
-                }_2.jpg`}
+                }_2.png`}
                 alt="test"
                 className="w-full object-cover rounded-lg"
               />
@@ -180,7 +180,7 @@ const ProgramCourse = ({ type }: { type: "PROGRAMS" | "COURSE" }) => {
                 }}
                 src={`/course_and_programs/${
                   type === "PROGRAMS" ? "pro" : "course"
-                }_3.jpg`}
+                }_3.png`}
                 alt="test"
                 className="w-full object-cover rounded-lg"
               />
